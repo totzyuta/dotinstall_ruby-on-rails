@@ -2,10 +2,6 @@
 
 <ul>
   <% @projects.each do |project| %>
-    <li><%= project.title %></li>
+    <li><%= link_to project.title, project_path(project.id) %></li>
   <% end %>
-
-  <hr>
-
-  <%= p @projects %>
 </ul>
